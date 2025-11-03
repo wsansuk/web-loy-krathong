@@ -25,7 +25,7 @@ import krathong7 from "../assets/images/2025/Krathong07.png";
 import krathong8 from "../assets/images/2025/Krathong08.png";
 import krathong9 from "../assets/images/2025/Krathong09.png";
 import krathong10 from "../assets/images/2025/Krathong10.png";
-import videoBg from "../assets/videos/6478764_Closeup_View.mp4";
+// import videoBg from "../assets/videos/6478764_Closeup_View.mp4";
 import { useNavigate } from "react-router-dom";
 import SendIcon from "@mui/icons-material/Send";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -524,7 +524,7 @@ export const CreateNew = ({}) => {
                 loop
                 playsInline
               >
-                <source src={videoBg} type="video/mp4" />
+                {/* <source src={videoBg} type="video/mp4" /> */}
                 Your browser does not support the video tag.
               </video>
               <Box>

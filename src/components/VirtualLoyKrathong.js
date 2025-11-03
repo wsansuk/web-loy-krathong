@@ -6,7 +6,7 @@ import toast from "react-hot-toast";
 import { Box } from "@mui/material/index";
 import HouseIcon from "@mui/icons-material/House";
 // import bgVideo from "../assets/videos/Picture_1.gif";
-// import bg2025 from "../assets/images/BG_2025.jpg";
+import bg2025 from "../assets/images/BG_2025.jpg";
 
 import { useNavigate } from "react-router-dom";
 import krathong1 from "../assets/images/2025/Krathong01.png";
@@ -87,7 +87,7 @@ const LoyKrathong = () => {
         Your browser does not support the video tag.
       </video> */}
 
-      <img className="background-video" src="https://pixeldrain.com/api/file/yc4d8Juh" alt="background" />
+      <img className="background-video" src={bg2025} alt="background" />
 
       <div className="main">
         {dataKrathong.map((item, index) => {

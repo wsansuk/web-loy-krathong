@@ -492,7 +492,7 @@ export const CreateNew = ({}) => {
                     </Box>
                     <Typography variant="caption" sx={{ color: "#9E9E9E" }}>
                       {" "}
-                      Powered with ❤️ by FTA team{" "}
+                      Powered with ❤️ by FTA & Media team{" "}
                     </Typography>
                   </Box>
                 </form>

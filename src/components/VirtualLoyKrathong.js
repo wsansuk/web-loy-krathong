@@ -197,7 +197,7 @@ const LoyKrathong = () => {
             cursor: "pointer",
           }}
         />
-        Powered with ❤️ by FTA team
+        Powered with ❤️ by FTA & Media team
       </Box>
     </div>
   );

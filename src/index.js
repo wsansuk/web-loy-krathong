@@ -4,16 +4,15 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import { ToastProvider } from "react-toast-notifications";
+import { Toaster } from "react-hot-toast";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <ToastProvider>
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
-    </ToastProvider>
+    <BrowserRouter>
+      <App />
+      <Toaster position="top-center" />
+    </BrowserRouter>
   </React.StrictMode>
 );
 

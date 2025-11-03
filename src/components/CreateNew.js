@@ -32,7 +32,7 @@ import VisibilityIcon from "@mui/icons-material/Visibility";
 import AccountCircle from "@mui/icons-material/AccountCircle";
 import CardHeader from "@mui/material/CardHeader";
 import IconButton from "@mui/material/IconButton";
-import { useToasts } from "react-toast-notifications";
+import toast from "react-hot-toast";
 
 const ImageButton = styled(ButtonBase)(({ theme }) => ({
   position: "relative",
@@ -277,7 +277,6 @@ const currencies = [
 ];
 export const CreateNew = ({}) => {
   const navigate = useNavigate();
-  const { addToast } = useToasts();
 
   const [click, setClick] = useState(0);
 
@@ -331,18 +330,12 @@ export const CreateNew = ({}) => {
       );
 
       if (response.data.response_code === "0000") {
-        addToast("ได้รับข้อมูลคุณ " + fullName + " เรียบร้อยแล้ว", {
-          appearance: "success",
-          autoDismiss: true,
-        });
+        toast.success("ได้รับข้อมูลคุณ " + fullName + " เรียบร้อยแล้ว");
 
         setClick(2);
       }
     } catch (error) {
-      addToast("Something error, please try to refresh the page", {
-        appearance: "error",
-        autoDismiss: true,
-      });
+      toast.error("Something error, please try to refresh the page");
       console.error(error);
     }
   };

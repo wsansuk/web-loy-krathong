@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import "../../src/LoyKrathong.css";
 import { useLocation } from "react-router-dom";
-import { useToasts } from "react-toast-notifications";
+import toast from "react-hot-toast";
 import { Box } from "@mui/material/index";
 import HouseIcon from "@mui/icons-material/House";
 // import bgVideo from "../assets/videos/Picture_1.gif";
@@ -25,7 +25,6 @@ const LoyKrathong = () => {
   const location = useLocation();
   const [dataKrathong, setDataKrathong] = useState([]);
   const [firstKrathong, setFirstKrathong] = useState([]);
-  const { addToast } = useToasts();
 
   useEffect(() => {
     getData();
@@ -37,9 +36,7 @@ const LoyKrathong = () => {
       if (response.data?.data.length) {
         setDataKrathong(response?.data?.data);
       } else {
-        addToast("Something error, please try to refresh the page", {
-          appearance: "error",
-        });
+        toast.error("Something error, please try to refresh the page");
       }
     } catch (error) {
       console.error(error);

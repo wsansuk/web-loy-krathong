@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import { useToasts } from "react-toast-notifications";
 import { Box } from "@mui/material/index";
 import HouseIcon from "@mui/icons-material/House";
-import bgVideo from "../assets/videos/Picture_1.gif";
+// import bgVideo from "../assets/videos/Picture_1.gif";
 
 import { useNavigate } from "react-router-dom";
 import krathong1 from "../assets/images/2025/Krathong01.png";
@@ -89,7 +89,7 @@ const LoyKrathong = () => {
         Your browser does not support the video tag.
       </video> */}
 
-      <img className="background-video" src={bgVideo} alt="background" />
+      <img className="background-video" src="https://drive.google.com/file/d/1FrxyBbWqZ5evCpeUZc5u9RwweshvtOz_/view?usp=sharing" alt="background" />
 
       <div className="main">
         {dataKrathong.map((item, index) => {

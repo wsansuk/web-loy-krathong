@@ -195,7 +195,7 @@ const LoyKrathong = () => {
             cursor: "pointer",
           }}
         />
-        Powered with ❤️ by TDI & Media team
+        Powered with ❤️ by TDI-FSIA & Media team
       </Box>
     </div>
   );

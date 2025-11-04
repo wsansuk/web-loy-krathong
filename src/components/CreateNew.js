@@ -497,7 +497,7 @@ export const CreateNew = ({}) => {
                     </Box>
                     <Typography variant="caption" sx={{ color: "#9E9E9E" }}>
                       {" "}
-                      Powered with ❤️ by TDI & Media team{" "}
+                      Powered with ❤️ by TDI-FSIA & Media team{" "}
                     </Typography>
                   </Box>
                 </form>

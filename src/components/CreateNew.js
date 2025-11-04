@@ -301,6 +301,11 @@ export const CreateNew = ({}) => {
   const [isDisabled, setIsDisabled] = useState(true);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [payloadMsg, setPayloadMsg] = useState([]);
+  const [currentDate, setCurrentDate] = useState(() => {
+    const date = new Date();
+    const options = { year: 'numeric', month: 'long', day: '2-digit' };
+    return date.toLocaleDateString('en-US', options);
+  });
 
   useEffect(() => {
     if (fullName !== "" && wish !== "" && department != "" && page != "") {
@@ -544,7 +549,7 @@ export const CreateNew = ({}) => {
                     }
                     subheader={
                       <Typography variant="body2" sx={{ textAlign: "left" }}>
-                        {"Noverber 15, 2024"}
+                        {currentDate}
                       </Typography>
                     }
                   />

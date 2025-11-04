@@ -50,24 +50,21 @@ const LoyKrathong = () => {
 
   // Function to create the keyframes dynamically
   const createAnimation = (index) => {
-    const x25 = Math.floor(Math.random() * 10 - 5);
-    const x33 = Math.floor(Math.random() * 10 - 5);
-    const x66 = Math.floor(Math.random() * 10 - 5);
-    const x75 = Math.floor(Math.random() * 10 - 5);
-
+ 
+  
     const styleSheet = document.styleSheets[0];
     const animationName = `moveUp-${index}`;
     const randomX = Math.floor(Math.random() * 30 - 10); // ตำแหน่ง x ที่สุ่มขณะเคลื่อนที่
     const randomStartY = Math.floor(Math.random() * 20 + 70); // ตำแหน่งเริ่มสุ่มระหว่าง 70vh ถึง 90vh
     // Insert keyframes with random X translations
-
+ 
     styleSheet.insertRule(
       ` @keyframes ${animationName} {
-     0% { transform: translateY(120vh); } // เริ่มจากนอกจอด้านล่าง
-      25% { transform: translateY(80vh) translateX(${randomX}vw) scale(0.9) }
-      50% { transform: translateY(50vh) translateX(${randomX}vw)scale(0.8) }
-      100% { transform: translateY(-50%) translateX(0vw)  scale(0.6) }
-     
+        0% { transform: translateY(120vh); } // เริ่มจากนอกจอด้านล่าง
+        25% { transform: translateX(20vw) translateY(80vh) scale(0.9) }
+        50% { transform: translateX(40vw) translateY(70vh)scale(0.8) }
+        70% { transform: translateX(70vw) translateY(60vh)scale(0.7) }
+        100% { transform: translateX(100vw) translateY(38vh)  scale(0.6) }
       }
     `,
       styleSheet.cssRules.length
@@ -75,6 +72,7 @@ const LoyKrathong = () => {
 
     return animationName;
   };
+
 
   useEffect(() => {
     dataKrathong.forEach((_, index) => createAnimation(index));
@@ -171,7 +169,7 @@ const LoyKrathong = () => {
               <img
                 src={imgSrc}
                 alt={"Krathong"}
-                className="krathong-image float-on-water"
+                className="krathong-image  float-on-water "
               />
             </div>
           );
@@ -197,7 +195,7 @@ const LoyKrathong = () => {
             cursor: "pointer",
           }}
         />
-        Powered with ❤️ by FTA & Media team
+        Powered with ❤️ by TDI & Media team
       </Box>
     </div>
   );
